@@ -8,7 +8,7 @@ public:
             //     if (nums[i]==nums[k]) {alreadyCounted=true;break;}
             // }
             // if (alreadyCounted) continue;
-            for (int j=0;j<nums.size();j++){
+            for (int j=i+1;j<nums.size();j++){
                 if (nums[i]==nums[j] && i<j){
                     count++;
                 }
