@@ -4,7 +4,6 @@ public:
        int key = -1;
         bool targetFound = false;
 
-        // First pass: check if target exists
         for (int i = 0; i < nums.size(); i++) {
             if (nums[i] == target) {
                 key = i;
@@ -13,7 +12,6 @@ public:
             }
         }
 
-        // Second pass: find insertion point if not found
         if (!targetFound) {
             for (int i = 0; i < nums.size(); i++) {
                 if (nums[i] > target) {
@@ -21,7 +19,6 @@ public:
                     break;
                 }
             }
-            // If target is bigger than all elements
             if (key == -1) {
                 key = nums.size();
             }
