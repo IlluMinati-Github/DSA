@@ -5,9 +5,9 @@ public:
         int b = n;
         while (b > 0) {
             if (b % 10 == 0) {
-               
+
                 a = false;
-                 break;
+                break;
             }
             b /= 10;
         }
