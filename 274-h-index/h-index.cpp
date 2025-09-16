@@ -3,11 +3,11 @@ public:
     int hIndex(vector<int>& citations) {
         sort(citations.begin(), citations.end()); 
         int n = citations.size();
-        int h = 0;
+        int result = 0;
         for (int i = 0; i < n; i++) {
-            int candidate = min(citations[i], n - i);
-            h = max(h, candidate);
+            int a = min(citations[i], n - i);
+            result = max(result, a);
         }
-        return h;
+        return result;
     }
 };
