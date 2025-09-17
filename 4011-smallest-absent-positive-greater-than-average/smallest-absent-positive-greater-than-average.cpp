@@ -7,8 +7,8 @@ public:
         }
 
         double realAvg = (double)sum / nums.size();
-        int avg = floor(realAvg) + 1;   // smallest integer > average
-        if (avg <= 0) avg = 1;          // must be positive
+        int avg = floor(realAvg) + 1;   
+        if (avg <= 0) avg = 1;          
 
         while (true) {
             bool found = false;
