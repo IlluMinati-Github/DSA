@@ -3,10 +3,9 @@ public:
     int trapRainWater(vector<vector<int>>& h) {
         int m = h.size(), n = h[0].size();
         vector<vector<int>> vis(m, vector<int>(n, 0));
-        using T = tuple<int,int,int>; // (height, x, y)
+        using T = tuple<int,int,int>; 
         priority_queue<T, vector<T>, greater<T>> pq;
 
-        // Push boundary cells
         for (int i = 0; i < m; ++i)
             for (int j = 0; j < n; ++j)
                 if (i == 0 || j == 0 || i == m-1 || j == n-1)
