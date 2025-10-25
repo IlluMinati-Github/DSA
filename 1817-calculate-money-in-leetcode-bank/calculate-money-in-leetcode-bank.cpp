@@ -1,14 +1,18 @@
 class Solution {
 public:
     int totalMoney(int n) {
-        auto [q, r]=div(n, 7);
-        return 28*q+7*q*(q-1)/2+(2*q+r+1)*r/2;
+        int sum = 0;
+        int weekStart = 1;  
+        int day = 0;
+
+        while (day < n) {
+            for (int d = 0; d < 7 && day < n; d++) {
+                sum += weekStart + d;
+                day++;
+            }
+            weekStart++; 
+        }
+
+        return sum;
     }
 };
-auto init = []()
-{ 
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-    return 'c';
-}();
